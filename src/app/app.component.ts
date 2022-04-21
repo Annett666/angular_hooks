@@ -6,5 +6,14 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.scss']
 })
 export class AppComponent {
-  title = 'angular_hooks';
+  show = false;
+  parentValue = 'App component'
+
+  inputHandler(value: any) {
+    this.parentValue = value
+  }
+
+  duplicate() {
+    this.parentValue = this.parentValue;
+  }
 }
